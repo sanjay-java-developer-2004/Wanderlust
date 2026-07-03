@@ -1,0 +1,58 @@
+export const activities = [
+  {
+    id: 1,
+    name: "Hiking",
+    icon: "🥾",
+    description: "Explore scenic trails and discover breathtaking viewpoints.",
+    color: "from-green-400 to-green-600",
+  },
+  {
+    id: 2,
+    name: "Camping",
+    icon: "⛺",
+    description: "Experience the great outdoors with camping under the stars.",
+    color: "from-amber-400 to-amber-600",
+  },
+  {
+    id: 3,
+    name: "Snorkeling",
+    icon: "🤿",
+    description: "Discover colorful coral reefs and marine life.",
+    color: "from-cyan-400 to-blue-600",
+  },
+  {
+    id: 4,
+    name: "Boating",
+    icon: "⛵",
+    description: "Sail the seas and explore beautiful coastlines.",
+    color: "from-blue-400 to-indigo-600",
+  },
+  {
+    id: 5,
+    name: "Food Tours",
+    icon: "🍽️",
+    description: "Taste authentic local cuisines and culinary traditions.",
+    color: "from-orange-400 to-red-600",
+  },
+  {
+    id: 6,
+    name: "Photography",
+    icon: "📸",
+    description: "Capture stunning moments and stunning landscapes.",
+    color: "from-purple-400 to-pink-600",
+  },
+  {
+    id: 7,
+    name: "Wildlife Safari",
+    icon: "🦁",
+    description: "Encounter exotic animals in their natural habitat.",
+    color: "from-yellow-400 to-orange-600",
+  },
+  {
+    id: 8,
+    name: "Festivals",
+    icon: "🎉",
+    description: "Experience vibrant cultural celebrations and festivals.",
+    color: "from-red-400 to-pink-600",
+  },
+];

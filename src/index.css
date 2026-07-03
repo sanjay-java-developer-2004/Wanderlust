@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #ffffff;
+  color: #023047;
+  overflow-x: hidden;
+}
+
+body.dark {
+  background-color: #0a0e27;
+  color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0077B6;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #005a96;
+}
+
+body.dark::-webkit-scrollbar-track {
+  background: #0a0e27;
+}
+
+body.dark::-webkit-scrollbar-thumb {
+  background: #90E0EF;
+}
+
+body.dark::-webkit-scrollbar-thumb:hover {
+  background: #0077B6;
+}
+
+/* Utility Classes */
+.gradient-blue {
+  background: linear-gradient(135deg, #0077B6 0%, #90E0EF 100%);
+}
+
+.gradient-dark {
+  background: linear-gradient(135deg, #023047 0%, #0077B6 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #0077B6 0%, #90E0EF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Button Animations */
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-ripple::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.btn-ripple:active::after {
+  animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+  to {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+/* Image lazy loading */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Selection Color */
+::selection {
+  background-color: #0077B6;
+  color: #ffffff;
+}
+
+body.dark::selection {
+  background-color: #90E0EF;
+  color: #023047;
+}
