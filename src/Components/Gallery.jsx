@@ -81,6 +81,12 @@ const Gallery = ({ darkMode }) => {
                   alt={image.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   loading="lazy"
+                  onLoad={(e) => e.currentTarget.classList.add('loaded')}
+                  onError={(e) => {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = '/favicon.svg';
+                    e.currentTarget.classList.add('loaded');
+                  }}
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300"></div>
 
